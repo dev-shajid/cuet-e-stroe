@@ -5,12 +5,13 @@ import { Star, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
+import {products} from '@/lib/data'
 
-export default function Component() {
+export default function Component({params}:{params:{id:string}}) {
   const [selectedSize, setSelectedSize] = useState('M');
   const [selectedImage, setSelectedImage] = useState(0); // For image selection
 
-  const product = {
+  const product2 = {
     name: "Men's Classic Fit Crew Neck T-Shirt",
     price: 29.99,
     rating: 4.5,
@@ -23,6 +24,12 @@ export default function Component() {
       '/placeholder.webp',
     ],
   };
+
+  const product = products.find(p => p.id.toString() === params.id);
+
+
+
+  if (!product) return null;
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -63,7 +70,7 @@ export default function Component() {
         <div className="space-y-6">
           <h1 className="text-3xl font-bold">{product.name}</h1>
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-semibold">${product.price.toFixed(2)}</span>
+            <span className="text-2xl font-semibold">${product.price}</span>
             <div className="flex items-center">
               {[...Array(5)].map((_, index) => (
                 <Star
@@ -82,7 +89,7 @@ export default function Component() {
           <div>
             <h3 className="text-sm font-medium">Size</h3>
             <div className="mt-2 flex flex-wrap gap-2">
-              {product.sizes.map((size) => (
+              {product2.sizes.map((size) => (
                 <Button
                   key={size}
                   variant={selectedSize === size ? 'default' : 'outline'}
