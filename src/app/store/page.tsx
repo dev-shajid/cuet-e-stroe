@@ -1,14 +1,9 @@
 'use client'
 
-import { cardAnimation, gridAnimation } from '@/components/Animations'
 import ProductCard from '@/components/ProductCard'
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { categories, products } from '@/lib/data'
 import { Icon } from '@iconify/react'
-import { motion } from 'framer-motion'
-import { MapPin, ShoppingCart } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 
@@ -24,7 +19,7 @@ export default function StorePage() {
         <h1 className="text-3xl font-bold mb-8 text-center">ক্যাটাগরি অনুযায়ী ব্রাউজ করুন</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {categories.map((category) => category.is_featured && (
-            <Link href={`/store/categories/${category.name}`} key={category.name}>
+            <Link href={`/store/categories/${category.id}`} key={category.name}>
               <Card
                 key={category.name}
                 className="bg-card/30 p-4 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-md cursor-pointer"

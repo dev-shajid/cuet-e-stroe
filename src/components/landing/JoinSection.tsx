@@ -9,7 +9,7 @@ export function JoinSection() {
                     <div className="space-y-12">
                         <h2 className="text-center">Join CUET Marketplace Today</h2>
                         <p className="mx-auto max-w-[600px] md:text-lg text-muted-foreground">
-                            Start buying, selling, and connecting with your fellow CUET students. It's free to join!
+                            Start buying, selling, and connecting with your fellow CUET students. Its free to join!
                         </p>
                     </div>
                     <Button size="lg" variant='gradient'>

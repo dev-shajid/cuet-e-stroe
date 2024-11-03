@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card"
+import { Card, CardHeader, CardContent, CardDescription } from "@/components/ui/card"
 import { Star } from "lucide-react"
 
 interface TestimonialCardProps {

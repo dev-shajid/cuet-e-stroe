@@ -156,8 +156,8 @@ export default function Component() {
                   </span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  "Great t-shirt! The fabric is soft and comfortable, and the fit is perfect. I've
-                  washed it several times now, and it's holding up well. Definitely recommend!"
+                  "Great t-shirt! The fabric is soft and comfortable, and the fit is perfect. Ive
+                  washed it several times now, and its holding up well. Definitely recommend"
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">- John D., Verified Buyer</p>
               </div>
