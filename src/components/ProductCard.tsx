@@ -7,11 +7,20 @@ import { Star } from 'lucide-react'
 
 interface ProductCardProps {
     product: {
-        id: number
-        name: string
-        price: string
-        rating: number
-        image: string
+        id: number;
+        name: string;
+        price: string;
+        images: string[];
+        rating: number;
+        is_featured: boolean;
+        category_id: number;
+        description: string;
+        reviews: {
+            username: string;
+            rating: number;
+            comment: string;
+        }[];
+
     }
 }
 
@@ -20,7 +29,7 @@ export default function ProductCard({product}: ProductCardProps) {
         <Card key={product.id} className="w-full max-w-sm overflow-hidden transition-all duration-300 hover:shadow-lg">
             <CardContent className="p-0 relative bg-muted aspect-square overflow-hidden">
                 <Image
-                    src={product.image}
+                    src={product.images?.[0]}
                     alt={product.name}
                     layout="fill"
                     objectFit="cover"
