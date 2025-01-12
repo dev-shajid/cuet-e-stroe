@@ -15,8 +15,8 @@ export default function BlurImage({ src, alt, className, id = 0 }: { src: string
                 placeholder='blur'
                 blurDataURL={src}
                 loading='lazy'
-                className={`transition w-auto ease-in-out duration-500 ${loading ? 'blur-xl scale-125' : 'blur-0 scale-100'} ${className}`}
-                onLoad={() => setTimeout(() => setLoading(false), id * 200)}
+                className={`transition w-auto ease-in-out duration-300 ${loading ? 'blur-xl scale-125' : 'blur-0 scale-100'} ${className}`}
+                onLoad={() => setTimeout(() => setLoading(false), id * 100)}
             />
         </div>
     )
